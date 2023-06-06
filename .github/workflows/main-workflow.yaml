@@ -1,0 +1,16 @@
+# File: .github/workflows/main-workflow.yml
+
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Build and Test
+        uses: ./.github/workflows/build-test.yml
